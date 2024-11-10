@@ -13,12 +13,6 @@
       "price": 25.98
     },
     {
-      "id": 3,
-      "name": "Pilea peperomioides",
-      "image": "./images/pilea.jpg",
-      "price": 5.99
-    },
-    {
       "id": 4,
       "name": "Pothos",
       "image": "./images/pothos.jpg",
@@ -41,6 +35,12 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "aloe",
+      "image": "",
+      "price": null,
+      "id": 8
     }
   ]
 }
