@@ -1,0 +1,127 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f0f2;
+    color: #333;
+}
+
+.app {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+/* Header styles */
+header {
+    background-color: #1e3555;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px 12px 0 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Plant List styling */
+.plant-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Plant Card styling */
+.plant-card {
+    background-color: #ffffff;
+    border: 2px solid #d1e7dd;
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.plant-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.plant-card h4 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #1e3555;
+}
+
+.plant-card p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.sold-out {
+    color: #b02a37;
+    font-weight: bold;
+    margin-top: 8px;
+    font-size: 0.95em;
+}
+
+/* Form styling */
+.new-plant-form,
+.searchbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.new-plant-form input,
+.searchbar input {
+    padding: 10px;
+    border: 1px solid #1e3555;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.new-plant-form input:focus,
+.searchbar input:focus {
+    border-color: #3a7ca5;
+}
+
+.new-plant-form button {
+    background-color: #1e3555;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-plant-form button:hover {
+    background-color: #3a7ca5;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}

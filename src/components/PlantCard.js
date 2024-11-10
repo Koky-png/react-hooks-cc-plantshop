@@ -1,47 +1,20 @@
 import React, { useState } from "react";
 
-function PlantCard({ deletePlant, id, image, name, price, updatePlant }) {
-  const [inStock, setInStock] = useState(true)
-  const [priceInput, setPriceInput] = useState(price)
+function PlantCard({ plant }) {
+  const [isSoldOut, setIsSoldOut] = useState(false);
 
-  const handleClick = () => setInStock(false)
-  const handleDelete = () => deletePlant(id)
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-
-    updatePlant(id, { price: parseFloat(priceInput) })
-  }
+  const handleSoldOutClick = () => {
+    setIsSoldOut((prev) => !prev);
+  };
 
   return (
-    <li className="card">
-      <img src={image} alt={name} />
-      <h4>{name}</h4>
-      <p>
-        Price:
-        <form onSubmit={handleSubmit}>
-          <input
-              name="price"
-              onChange={(event) => setPriceInput(event.target.value)}
-              type="text"
-              value={priceInput}
-          />
-          <button type="submit">Update Price</button>
-        </form>
-      </p>
-      <div className={"row"}>
-        {inStock ? (
-          <button
-              className="primary"
-              onClick={handleClick}
-          >
-            In Stock
-          </button>
-        ) : (
-          <button>Out of Stock</button>
-        )}
-        <button onClick={handleDelete}>x</button>
-      </div>
+    <li className="plant-card">
+      <img src={plant.image} alt={plant.name} />
+      <h3>{plant.name}</h3>
+      <p>Price: {plant.price}</p>
+      <button onClick={handleSoldOutClick}>
+        {isSoldOut ? "Sold Out" : "Available"}
+      </button>
     </li>
   );
 }
