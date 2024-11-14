@@ -8,7 +8,7 @@ function PlantPage() {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/plants")
+    fetch("https://react-hooks-cc-plantshop-rksc.onrender.com/plants")
       .then((response) => response.json())
       .then((data) => setPlants(data));
   }, []);
